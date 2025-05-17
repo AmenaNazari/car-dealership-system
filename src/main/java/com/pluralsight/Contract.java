@@ -1,7 +1,7 @@
 package com.pluralsight;
 
 public abstract class Contract {
- {
+
     private String date;
     private String customerName;
     private String customerEmail;
@@ -27,12 +27,13 @@ public abstract class Contract {
         return customerEmail;
     }
 
-    public Vehicle getVehicle() {
+    public Vehicle getVehicleSold() {
         return vehicle;
     }
 
     // Abstract methods
     public abstract double getTotalPrice();
+
     public abstract double getMonthlyPayment();
 }
 
