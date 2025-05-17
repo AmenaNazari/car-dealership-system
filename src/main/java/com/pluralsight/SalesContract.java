@@ -1,11 +1,17 @@
 package com.pluralsight;
-
 public class SalesContract extends Contract {
-    private boolean isFinanced;
+    private double salesTaxAmount;
+    private double recordingFee;
+    private double processingFee;
+    private boolean financeOption;
 
     public SalesContract(String date, String customerName, String customerEmail, Vehicle vehicle, boolean isFinanced) {
         super(date, customerName, customerEmail, vehicle);
-        this.isFinanced = isFinanced;
+        this.financeOption = isFinanced;
+        this.salesTaxAmount = getVehicleSold().getPrice() * 0.05;
+        this.recordingFee = 100.00;
+        this.processingFee = getVehicleSold().getPrice() < 10000 ? 295.00 : 495.00;
+
     }
 
     @Override
