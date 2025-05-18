@@ -1,5 +1,5 @@
 package com.pluralsight;
-import java.io.FileWriter;   // Capital 'W'
+import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.IOException;
 
@@ -7,11 +7,27 @@ import java.io.IOException;
 public class ContractFileManager {
     public void saveContract(Contract contract) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("contracts.csv", true));
-            // you'll write contract data here
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+            try {
+                BufferedWriter writer = new BufferedWriter(new FileWriter("contracts.csv", true));
+
+                Vehicle vehicle = contract.getVehicleSold();
+
+                writer.write(
+                        "SALE," +
+                                contract.getDate() + "," +
+                                contract.getCustomerName() + "," +
+                                contract.getCustomerEmail() + "," +
+                                vehicle.getVin() + "," +
+                                vehicle.getYear() + "," +
+                                vehicle.getMake() + "," +
+                                vehicle.getModel()
+                );
+
+                writer.newLine();
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
