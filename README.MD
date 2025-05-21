@@ -39,8 +39,8 @@ Collections – ArrayList, List
 
 Inheritance & Abstraction – Contract, SalesContract, LeaseContract
 
-🎬 Demo
-🖼️ [Insert your screenshots or GIFs here — maybe showing the vehicle list and a sale confirmation]
+ Demo
+ [![img.png](img.png)]
 
 🛠️ Future Enhancements
 View contract history in the console
@@ -61,6 +61,6 @@ Java tutorials on w3schools
 👥 Team Members
 [Amena Nazari] – Full development, testing, and documentation
 
-🙏 Thanks
+🙏
 Thank you to Raymond Maroun for clear instructions and stellar teaching.
 
